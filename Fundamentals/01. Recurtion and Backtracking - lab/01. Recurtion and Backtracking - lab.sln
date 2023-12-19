@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. 8 Queens Puzzle", "06. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Recursive Fibonacci", "07. Recursive Fibonacci\07. Recursive Fibonacci.csproj", "{A0897D20-AD46-48C3-B087-3592C2C5AEF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.LongestCommonSubsequence", "08.LongestCommonSubsequence\08.LongestCommonSubsequence.csproj", "{03A0BA91-5B45-4B1D-8402-FBDCE846BC9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A0897D20-AD46-48C3-B087-3592C2C5AEF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0897D20-AD46-48C3-B087-3592C2C5AEF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0897D20-AD46-48C3-B087-3592C2C5AEF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03A0BA91-5B45-4B1D-8402-FBDCE846BC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A0BA91-5B45-4B1D-8402-FBDCE846BC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A0BA91-5B45-4B1D-8402-FBDCE846BC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A0BA91-5B45-4B1D-8402-FBDCE846BC9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
