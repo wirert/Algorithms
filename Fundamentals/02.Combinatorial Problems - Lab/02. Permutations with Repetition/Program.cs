@@ -1,6 +1,7 @@
 ﻿namespace _02._Permutations_with_Repetition
 {
     using System;
+    using System.Collections.Generic;
 
     internal class Program
     {
