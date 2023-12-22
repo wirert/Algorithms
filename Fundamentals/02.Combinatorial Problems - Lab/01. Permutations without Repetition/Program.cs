@@ -14,7 +14,39 @@
             permutation = new string[elements.Length];
             isUsed = new bool[elements.Length];
 
-            PrintPermutations(0);
+            PrintPermutationsWithSwap(0);
+        }
+
+        private static void PrintPermutationsWithSwap(int index)
+        {
+            if (index >= elements.Length)
+            {
+                Console.WriteLine(string.Join(" ", elements));
+                return;
+            }
+
+            PrintPermutationsWithSwap(index + 1);
+
+            var swapped = new HashSet<string> { elements[index] };
+
+            for (int i = index + 1; i < elements.Length; i++)
+            {
+                if (!swapped.Contains(elements[i]))
+                {
+                    Swap(index, i);
+                    PrintPermutationsWithSwap(index + 1);
+                    Swap(index, i);
+
+                    swapped.Add(elements[index]);
+                }
+            }
+        }
+
+        private static void Swap(int i, int j)
+        {
+            var temp = elements[i];
+            elements[i] = elements[j];
+            elements[j] = temp;
         }
 
         private static void PrintPermutations(int index)
