@@ -27,18 +27,12 @@
 
             PrintPermutationsWithSwap(index + 1);
 
-            var swapped = new HashSet<string> { elements[index] };
 
             for (int i = index + 1; i < elements.Length; i++)
-            {
-                if (!swapped.Contains(elements[i]))
-                {
-                    Swap(index, i);
-                    PrintPermutationsWithSwap(index + 1);
-                    Swap(index, i);
-
-                    swapped.Add(elements[index]);
-                }
+            {               
+                Swap(index, i);
+                PrintPermutationsWithSwap(index + 1);
+                Swap(index, i);
             }
         }
 
