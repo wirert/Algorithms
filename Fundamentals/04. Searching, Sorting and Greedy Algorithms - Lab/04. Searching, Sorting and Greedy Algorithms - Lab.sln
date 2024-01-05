@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Binary Search", "01. Binary Search\01. Binary Search.csproj", "{05274316-17ED-411C-B366-E8C1517EBADE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Selection Sort", "02. Selection Sort\02. Selection Sort.csproj", "{75DA0053-1653-4718-97CF-B14E3CA2C898}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{05274316-17ED-411C-B366-E8C1517EBADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05274316-17ED-411C-B366-E8C1517EBADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05274316-17ED-411C-B366-E8C1517EBADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DA0053-1653-4718-97CF-B14E3CA2C898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DA0053-1653-4718-97CF-B14E3CA2C898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DA0053-1653-4718-97CF-B14E3CA2C898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DA0053-1653-4718-97CF-B14E3CA2C898}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

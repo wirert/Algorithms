@@ -5,24 +5,26 @@
 
     internal class Program
     {
-        private static int[] arr;
 
         static void Main(string[] args)
         {
-            arr = Console.ReadLine()
+           var arr = Console.ReadLine()
                 .Split()
                 .Select(int.Parse)
                 .ToArray();
 
             int n = int.Parse(Console.ReadLine());
             
-            int index = FindIndex(n, 0, arr.Length - 1);
+            int index = FindIndex(n, arr);
 
             Console.WriteLine(index);
         }
 
-        private static int FindIndex(int n, int start, int end)
+        private static int FindIndex(int n, int[] arr)
         {
+            int start = 0;
+            int end = arr.Length - 1;
+
             while (start <= end)
             {
                 var middle = (start + end) / 2;
