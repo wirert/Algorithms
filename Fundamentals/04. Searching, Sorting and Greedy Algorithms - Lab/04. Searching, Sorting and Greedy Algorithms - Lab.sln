@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Binary Search", "01. Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Selection Sort", "02. Selection Sort\02. Selection Sort.csproj", "{75DA0053-1653-4718-97CF-B14E3CA2C898}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Bubble Sort", "03. Bubble Sort\03. Bubble Sort.csproj", "{55319973-33E8-4DA3-A5FC-2149C33C6486}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{75DA0053-1653-4718-97CF-B14E3CA2C898}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75DA0053-1653-4718-97CF-B14E3CA2C898}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75DA0053-1653-4718-97CF-B14E3CA2C898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55319973-33E8-4DA3-A5FC-2149C33C6486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55319973-33E8-4DA3-A5FC-2149C33C6486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55319973-33E8-4DA3-A5FC-2149C33C6486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55319973-33E8-4DA3-A5FC-2149C33C6486}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
