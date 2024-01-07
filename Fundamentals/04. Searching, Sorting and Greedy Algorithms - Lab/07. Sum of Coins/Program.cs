@@ -15,24 +15,23 @@
                 
             int target = int.Parse(Console.ReadLine());
 
-            var countCoins = new Dictionary<int, int>();
+            var coinsCountByValue = new Dictionary<int, int>();
             int totalCoins = 0;
 
             while (coins.Count > 0 && target > 0)
             {
-                var coin = coins.Dequeue();
+                var coinValue = coins.Dequeue();
+                var coinCount = target / coinValue;
 
-                var count = target / coin;
-
-                if (count == 0)
+                if (coinCount == 0)
                 {
                     continue;
                 }
 
-                countCoins.Add(coin, count);
-                totalCoins += count;
+                coinsCountByValue.Add(coinValue, coinCount);
+                totalCoins += coinCount;
 
-                target %= coin;
+                target %= coinValue;
             }
 
             if (target > 0)
@@ -43,7 +42,7 @@
             {
                 Console.WriteLine($"Number of coins to take: {totalCoins}");
 
-                foreach (var coin in countCoins)
+                foreach (var coin in coinsCountByValue)
                 {
                     Console.WriteLine($"{coin.Value} coin(s) with value {coin.Key}");
                 }
