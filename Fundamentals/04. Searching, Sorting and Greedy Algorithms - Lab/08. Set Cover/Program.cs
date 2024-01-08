@@ -34,7 +34,8 @@
                 }
 
                 universeSet.RemoveWhere(e => bestSet.Contains(e));
-                takenSets.Add(bestSet);                
+                takenSets.Add(bestSet);   
+                sets.Remove(bestSet);
             }
 
             Console.WriteLine($"Sets to take ({takenSets.Count}):");
