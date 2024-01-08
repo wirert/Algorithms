@@ -7,7 +7,13 @@
     internal class Program
     {
         private static Dictionary<string, List<string>> graph = new Dictionary<string, List<string>>();
+
+        //used in BFS solution
         private static Dictionary<string, int> parentsCount = new Dictionary<string, int>();
+
+        //used in DFS solution
+        private static HashSet<string> visited = new HashSet<string>();
+        private static HashSet<string> cycles = new HashSet<string>();
 
         static void Main(string[] args)
         {
@@ -15,7 +21,52 @@
 
             FillGraph(n);
 
-            PrintSortedTopological();
+            // PrintSortedTopological();
+
+            TopologicalSortDfsAndPrint();
+        }
+
+        private static void TopologicalSortDfsAndPrint()
+        {
+            var sorted = new Stack<string>();
+
+            try
+            {
+                foreach (var node in graph.Keys)
+                {
+                    TopSortDFS(node, sorted);
+                }
+
+                Console.WriteLine($"Topological sorting: {string.Join(", ", sorted)}");
+            }
+            catch (InvalidOperationException ioe)
+            {
+                Console.WriteLine(ioe.Message);
+            }
+        }
+
+        private static void TopSortDFS(string node, Stack<string> sorted)
+        {
+            if (cycles.Contains(node))
+            {
+                throw new InvalidOperationException("Invalid topological sorting");
+            }
+
+            if (visited.Contains(node))
+            {
+                return;
+            }
+
+            visited.Add(node);
+            cycles.Add(node);
+
+            foreach (var child in graph[node])
+            {
+                TopSortDFS(child, sorted);
+            }
+
+            cycles.Remove(node);
+            sorted.Push(node);
         }
 
         private static void PrintSortedTopological()
