@@ -7,7 +7,7 @@
     internal class Program
     {
         private static Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
-        
+
         static void Main(string[] args)
         {
             int nodesCount = int.Parse(Console.ReadLine()!);
@@ -17,14 +17,14 @@
             {
                 var line = Console.ReadLine()!.Split(":", StringSplitOptions.RemoveEmptyEntries);
                 var node = int.Parse(line[0]);
-                var children = line.Length == 1 
-                    ? new List<int>() 
+                var children = line.Length == 1
+                    ? new List<int>()
                     : line[1].Split().Select(int.Parse).ToList();
 
                 graph.Add(node, children);
             }
 
-            for (int i = 0;i < distancePairsCount;i++)
+            for (int i = 0; i < distancePairsCount; i++)
             {
                 var line = Console.ReadLine()!.Split("-").Select(int.Parse).ToArray();
                 var startNode = line[0];
@@ -42,13 +42,13 @@
         {
             var queue = new Queue<int>();
             queue.Enqueue(startNode);
-            visited.Add(startNode);            
+            visited.Add(startNode);
 
             while (queue.Count > 0)
             {
-                var node = queue.Dequeue();                
+                var node = queue.Dequeue();
 
-                if(node == endNode)
+                if (node == endNode)
                 {
                     return GetPathDistance(node, parent);
                 }
@@ -56,7 +56,7 @@
                 foreach (var child in graph[node])
                 {
                     if (!visited.Contains(child))
-                    {                        
+                    {
                         queue.Enqueue(child);
                         visited.Add(child);
                         parent[child] = node;
