@@ -59,7 +59,6 @@
                     }
                 }
             }
-
         }
 
         private static void PrintPath(int node)
@@ -69,13 +68,11 @@
 
             while (parent[node] != 0)
             {
-
                 node = parent[node];
                 resultPath.Push(node);
             }
 
             Console.WriteLine($"Shortest path length is: {resultPath.Count - 1}");
-
             Console.WriteLine(string.Join(" ", resultPath));
         }
     }
