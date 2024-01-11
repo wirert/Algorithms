@@ -25,6 +25,23 @@
 
         static void Main(string[] args)
         {
+            FillGraph();
+
+            List<Street> importantStrets = FindImportantStreets();
+
+            Console.WriteLine("Important streets:");
+
+            foreach (var street in importantStrets)
+            {
+                var first = Math.Min(street.First, street.Second);
+                var second = Math.Max(street.First, street.Second);
+
+                Console.WriteLine($"{first} {second}");
+            }
+        }
+
+        private static void FillGraph()
+        {
             int n = int.Parse(Console.ReadLine()!);
 
             graph = new List<int>[n];
@@ -50,17 +67,20 @@
 
                 streets.Add(new Street(first, second));
             }
+        }
 
+        private static List<Street> FindImportantStreets()
+        {
             var importantStrets = new List<Street>();
 
-            foreach (var street in streets.OrderBy(s => s.First).ThenBy(s => s.Second))
+            foreach (var street in streets)
             {
                 visited = new HashSet<int>();
 
                 graph[street.First].Remove(street.Second);
                 graph[street.Second].Remove(street.First);
 
-                if (!isAlternativeRoad(street.First, street.Second))
+                if (!IsAlternativeRoad(street.First, street.Second))
                 {
                     importantStrets.Add(street);
                 }
@@ -69,18 +89,10 @@
                 graph[street.Second].Add(street.First);
             }
 
-            Console.WriteLine("Important streets:");
-
-            foreach (var street in importantStrets)
-            {
-                var first = Math.Min(street.First, street.Second);
-                var second = Math.Max(street.First, street.Second);
-
-                Console.WriteLine($"{first} {second}");
-            }
+            return importantStrets;
         }
 
-        private static bool isAlternativeRoad(int node, int endNode)
+        private static bool IsAlternativeRoad(int node, int endNode)
         {
             if (node == endNode)
             {
@@ -96,7 +108,7 @@
 
             foreach (var destination in graph[node])
             {
-                if (isAlternativeRoad(destination, endNode))
+                if (IsAlternativeRoad(destination, endNode))
                 {
                     return true;
                 }
