@@ -20,7 +20,6 @@
 
         private static void RemoveCycles()
         {
-            int removedEdgesCount = 0;
             List<Tuple<string, string>> removedEdges = new List<Tuple<string, string>>();
 
             foreach (var edge in edges)
@@ -39,12 +38,12 @@
                         graph[edge.Item2].Add(edge.Item1);
                         break;
                     }
-                    removedEdgesCount++;
+
                     removedEdges.Add(edge);
                 }
             }
 
-            Console.WriteLine($"Edges to remove: {removedEdgesCount}");
+            Console.WriteLine($"Edges to remove: {removedEdges.Count}");
 
             foreach (var edge in removedEdges)
             {
