@@ -47,8 +47,15 @@
                 }
             }
 
-            int row = rows - 1;
-            int col = cols - 1;
+            var path = FindPathWithHighestSum();
+
+            Console.WriteLine(string.Join(" ", path));
+        }
+
+        private static Stack<string> FindPathWithHighestSum()
+        {
+            int row = matrix.GetLength(0) - 1;
+            int col = matrix.GetLength(1) - 1;
             var path = new Stack<string>();
 
             while (row > 0 && col > 0)
@@ -65,7 +72,7 @@
                 }
             }
 
-            while(row > 0)
+            while (row > 0)
             {
                 path.Push($"[{row}, {col}]");
                 row--;
@@ -79,7 +86,7 @@
 
             path.Push("[0, 0]");
 
-            Console.WriteLine(string.Join(" ", path) );
+            return path;
         }
     }
 }
