@@ -41,7 +41,7 @@
         private static Stack<char> FindLongestSubsequence(string firstStr, string secondStr)
         {
             int row = lcs.GetLength(0) - 1;
-            int col = lcs.GetLength(1) - 1;            
+            int col = lcs.GetLength(1) - 1;
             var sequence = new Stack<char>();
 
             while (row > 0 && col > 0)
@@ -49,15 +49,13 @@
                 int fIdx = row - 1;
                 int sIdx = col - 1;
 
-                if (firstStr[fIdx] == secondStr[sIdx] && 
-                    lcs[row, col] == lcs[row -1, col -1] + 1)
+                if (firstStr[fIdx] == secondStr[sIdx])
                 {
                     sequence.Push(firstStr[fIdx]);
-
                     row--;
                     col--;
                 }
-                else if (lcs[row - 1, col] > lcs[row, col -1])
+                else if (lcs[row - 1, col] > lcs[row, col - 1])
                 {
                     row--;
                 }
@@ -66,7 +64,6 @@
                     col--;
                 }
             }
-
 
             return sequence;
         }
