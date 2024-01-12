@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Fibonacci", "01. Fibonacci\01. Fibonacci.csproj", "{9371033E-B45B-4D16-BFE5-542B0265BFF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Move Down-Right", "02. Move Down-Right\02. Move Down-Right.csproj", "{5329F4F8-295F-48C7-BAD7-51A7D14A9213}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9371033E-B45B-4D16-BFE5-542B0265BFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9371033E-B45B-4D16-BFE5-542B0265BFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9371033E-B45B-4D16-BFE5-542B0265BFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5329F4F8-295F-48C7-BAD7-51A7D14A9213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5329F4F8-295F-48C7-BAD7-51A7D14A9213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5329F4F8-295F-48C7-BAD7-51A7D14A9213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5329F4F8-295F-48C7-BAD7-51A7D14A9213}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
