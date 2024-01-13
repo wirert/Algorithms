@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Word Differences", "05.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Connecting Cables", "06. Connecting Cables\06. Connecting Cables.csproj", "{2BF008EB-7DAE-4036-B017-471F17D0FCE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Minimum Edit Distance", "07. Minimum Edit Distance\07. Minimum Edit Distance.csproj", "{133DE961-305D-4680-A0B4-B06C97027FC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2BF008EB-7DAE-4036-B017-471F17D0FCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF008EB-7DAE-4036-B017-471F17D0FCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BF008EB-7DAE-4036-B017-471F17D0FCE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{133DE961-305D-4680-A0B4-B06C97027FC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133DE961-305D-4680-A0B4-B06C97027FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133DE961-305D-4680-A0B4-B06C97027FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133DE961-305D-4680-A0B4-B06C97027FC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
