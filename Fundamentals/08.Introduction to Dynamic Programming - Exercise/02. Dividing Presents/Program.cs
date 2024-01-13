@@ -27,7 +27,7 @@
             List<int> alanPresents = FindPresents(possibleSums, alanSum);
 
             Console.WriteLine($"Alan takes: {string.Join(" ", alanPresents)}");
-            Console.WriteLine("Bob takes the rest.");            
+            Console.WriteLine("Bob takes the rest.");
         }
 
         private static List<int> FindPresents(Dictionary<int, int> possibleSums, int alanSum)
@@ -41,7 +41,7 @@
                 alanSum -= curSum;
             }
 
-            return result; 
+            return result;
         }
 
         private static Dictionary<int, int> FindAllSums(int[] presents)
@@ -59,7 +59,7 @@
                     if (!sums.ContainsKey(newSum))
                     {
                         sums.Add(newSum, present);
-                    }                    
+                    }
                 }
             }
 
