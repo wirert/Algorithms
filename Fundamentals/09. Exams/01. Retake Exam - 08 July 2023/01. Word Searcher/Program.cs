@@ -26,6 +26,8 @@
 
             var words = Console.ReadLine()!.Split();
 
+            var foundWords = new HashSet<string>();
+
             for (int row = 0; row < rows; row++)
             {
                 for (int col = 0; col < cols; col++)
@@ -36,11 +38,13 @@
                     {
                         if (IsWordPossible(row, col, word, 0))
                         {
-                            Console.WriteLine(word);
+                            foundWords.Add(word);
                         }
                     }
                 }
             }
+
+            Console.WriteLine(string.Join(Environment.NewLine, foundWords));
         }
 
         private static bool IsWordPossible(int row, int col, string word, int wordIdx)
