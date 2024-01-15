@@ -17,7 +17,7 @@
 
             network = new List<int>[peopleCount + 1];
 
-            for (int i = 0; i < connectionsCount; i++) 
+            for (int i = 0; i < connectionsCount; i++)
             {
                 var edge = Console.ReadLine()!.Split().Select(int.Parse).ToArray();
 
@@ -56,7 +56,7 @@
         }
 
         private static int CalcNeededTime(int node, int endNode)
-        {           
+        {
             var queue = new Queue<int>();
             queue.Enqueue(node);
             visited[node] = true;
@@ -67,7 +67,7 @@
 
                 if (curNode == endNode)
                 {
-                    return GetTime(curNode);                    
+                    return GetTime(curNode);
                 }
 
                 foreach (var child in network[curNode])
