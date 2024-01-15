@@ -36,7 +36,7 @@
                 var arrTime = arrivals[arrIdx];
                 var depTime = departures[depIdx];
 
-                if(arrTime < depTime)
+                if (arrTime < depTime)
                 {
                     takenPlatforms++;
                     arrIdx++;
