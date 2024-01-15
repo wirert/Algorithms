@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Bitcoin Miners", "01. Bitcoin Miners\01. Bitcoin Miners.csproj", "{D04C41AD-CC14-4321-9121-1B80B3B8B0BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Chainalysis", "02. Chainalysis\02. Chainalysis.csproj", "{25F540DD-B15E-434E-AAA4-6B88E0908746}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D04C41AD-CC14-4321-9121-1B80B3B8B0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D04C41AD-CC14-4321-9121-1B80B3B8B0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D04C41AD-CC14-4321-9121-1B80B3B8B0BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F540DD-B15E-434E-AAA4-6B88E0908746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F540DD-B15E-434E-AAA4-6B88E0908746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F540DD-B15E-434E-AAA4-6B88E0908746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F540DD-B15E-434E-AAA4-6B88E0908746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
