@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Two Minutes to Midnight
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Time", "02. Time\02. Time.csproj", "{96658D98-BE7F-4A79-943F-964D91692768}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. The Story Telling", "03. The Story Telling\03. The Story Telling.csproj", "{DC69488D-23D9-4D82-A82D-E26D0AF0C989}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{96658D98-BE7F-4A79-943F-964D91692768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96658D98-BE7F-4A79-943F-964D91692768}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96658D98-BE7F-4A79-943F-964D91692768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC69488D-23D9-4D82-A82D-E26D0AF0C989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC69488D-23D9-4D82-A82D-E26D0AF0C989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC69488D-23D9-4D82-A82D-E26D0AF0C989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC69488D-23D9-4D82-A82D-E26D0AF0C989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
