@@ -18,41 +18,31 @@
             for (int r = 0; r < rows; r++)
             {
                 var rowNums = Console.ReadLine()!.Split().Select(int.Parse).ToArray();
+
                 for (int c = 0; c < cols; c++)
                 {
                     matrix[r, c] = rowNums[c];
                 }
             }
 
-            var dp = new int[rows, cols];
-            dp[0, 0] = matrix[0, 0];
+            int[,] dp = FillHelperMatrix(rows, cols);
+            List<int> pathWithMaxSum = FindMaxSumPath(dp);
+            int pathSum = dp[rows - 1, cols - 1];
 
-            for (int r = 1; r < rows; r++)
-            {
-                dp[r, 0] = dp[r - 1, 0] + matrix[r, 0];
-            }
+            Console.WriteLine(pathSum);
+            Console.WriteLine(string.Join(" ", pathWithMaxSum));
+        }
 
-            for (int c = 1; c < rows; c++)
-            {
-                dp[0, c] = dp[0, c - 1] + matrix[0, c];
-            }
+        private static List<int> FindMaxSumPath(int[,] dp)
+        {
+            var pathWithMaxSum = new List<int>();
 
-            for (int r = 1; r < rows; r++)
-            {
-                for (int c = 1; c < cols; c++)
-                {
-                    dp[r, c] = matrix[r, c] + Math.Max(dp[r - 1, c], dp[r, c - 1]);
-                }
-            }
-
-            var path = new List<int>();
-
-            int row = rows - 1;
-            int col = cols - 1;
+            int row = matrix.GetLength(0) - 1;
+            int col = matrix.GetLength(1) - 1;
 
             while (row > 0 && col > 0)
             {
-                path.Add(matrix[row, col]);
+                pathWithMaxSum.Add(matrix[row, col]);
 
                 if (dp[row - 1, col] >= dp[row, col - 1])
                 {
@@ -66,19 +56,44 @@
 
             while (row > 0)
             {
-                path.Add(matrix[row, col]);
+                pathWithMaxSum.Add(matrix[row, col]);
                 row--;
             }
             while (col > 0)
             {
-                path.Add(matrix[row, col]);
+                pathWithMaxSum.Add(matrix[row, col]);
                 col--;
             }
 
-            path.Add(matrix[0, 0]);
+            pathWithMaxSum.Add(matrix[0, 0]);
 
-            Console.WriteLine(dp[rows - 1, cols - 1]);
-            Console.WriteLine(string.Join(" ", path));
+            return pathWithMaxSum;
+        }
+
+        private static int[,] FillHelperMatrix(int rows, int cols)
+        {
+            var dp = new int[rows, cols];
+            dp[0, 0] = matrix[0, 0];
+
+            for (int r = 1; r < rows; r++)
+            {
+                dp[r, 0] = dp[r - 1, 0] + matrix[r, 0];
+            }
+
+            for (int c = 1; c < cols; c++)
+            {
+                dp[0, c] = dp[0, c - 1] + matrix[0, c];
+            }
+
+            for (int r = 1; r < rows; r++)
+            {
+                for (int c = 1; c < cols; c++)
+                {
+                    dp[r, c] = matrix[r, c] + Math.Max(dp[r - 1, c], dp[r, c - 1]);
+                }
+            }
+
+            return dp;
         }
     }
 }
