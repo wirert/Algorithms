@@ -6,14 +6,22 @@
 
     internal class Program
     {
-        private static int[,] lcs;
-
         static void Main(string[] args)
         {
             var firstTimeline = Console.ReadLine()!.Split().Select(int.Parse).ToArray();
             var secondTimeline = Console.ReadLine()!.Split().Select(int.Parse).ToArray();
 
-            lcs = new int[firstTimeline.Length + 1, secondTimeline.Length + 1];
+            int[,] lcs = FillHelperMatrix(firstTimeline, secondTimeline);
+
+            Stack<int> longestSubsequence = FindLongestSubsequence(firstTimeline, secondTimeline, lcs);
+
+            Console.WriteLine(string.Join(" ", longestSubsequence));
+            Console.WriteLine(longestSubsequence.Count);
+        }
+
+        private static int[,] FillHelperMatrix(int[] firstTimeline, int[] secondTimeline)
+        {
+            int[,] lcs = new int[firstTimeline.Length + 1, secondTimeline.Length + 1];
 
             for (var r = 1; r <= firstTimeline.Length; r++)
             {
@@ -23,20 +31,17 @@
                     {
                         lcs[r, c] = 1 + lcs[r - 1, c - 1];
                     }
-                    else 
+                    else
                     {
                         lcs[r, c] = Math.Max(lcs[r - 1, c], lcs[r, c - 1]);
                     }
                 }
             }
 
-            Stack<int> longestSubsequence = FindLongestSubsequence(firstTimeline, secondTimeline);
-
-            Console.WriteLine(string.Join(" ", longestSubsequence));
-            Console.WriteLine(longestSubsequence.Count);
+            return lcs;
         }
 
-        private static Stack<int> FindLongestSubsequence(int[] firstTimeline, int[] secondTimeline)
+        private static Stack<int> FindLongestSubsequence(int[] firstTimeline, int[] secondTimeline, int[,] lcs)
         {
             var longestSubsequence = new Stack<int>();
             int row = lcs.GetLength(0) - 1;
